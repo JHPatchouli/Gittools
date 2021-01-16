@@ -118,7 +118,7 @@ if %errorlevel% == 0 (
 	cd ..
 	echo 任意键重试
 	pause
-	goto auto
+	goto add
 :commit
 set /p commit=提交信息(默认为空)：
 if "%commit%"=="" set commit=push
@@ -132,7 +132,7 @@ if %errorlevel% == 0 (
 	cd ..
 	echo 任意键重试
 	pause
-	goto auto
+	goto commit
 :push
 echo 接下来可能需要Github账号和密码，请确保输入的是该项目的管理者账号信息
 git push
@@ -147,7 +147,7 @@ if %errorlevel% == 0 (
 	cd ..
 	echo 任意键重试
 	pause
-	goto auto
+	goto push
 :checkdir
 if exist project (
 	echo 存在项目文件夹
