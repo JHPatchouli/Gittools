@@ -1,2 +1,4 @@
 # Gittools
 一个简单管理Git仓库的bat
+
+必须先安装Git并设置可cmd调用才可使用

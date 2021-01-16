@@ -1,7 +1,7 @@
 @echo off
 title Git Tools By JHPatchouli
 echo "测试Git是否安装."
-goto chack
+goto checkdir
 cls
 echo "测试Git是否安装.."
 cls
@@ -148,7 +148,15 @@ if %errorlevel% == 0 (
 	echo 任意键重试
 	pause
 	goto auto
-:chack
+:checkdir
+if exist project (
+	echo 存在项目文件夹
+	goto check )
+md project
+goto check
+
+
+:check
 git --version > ./version.log
 if %errorlevel% == 0 (
 　　echo OK
@@ -162,4 +170,5 @@ if %errorlevel% == 0 (
 	pause
 	goto exit
 )
+
 :exit
