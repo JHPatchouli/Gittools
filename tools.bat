@@ -81,7 +81,7 @@ if exist %pull% (
 	cd ..
 	echo 任意键返回菜单
 	pause
-	goto ) else (
+	goto ST ) else (
 	echo 出现错误，请检查Git输出
 	cd ..
 	echo 任意键返回菜单
